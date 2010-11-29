@@ -20,6 +20,12 @@ Specifically, this script:
 Link the script at the end of your HTML email file and view the file in your browser.
 
   <script src="cm-preview.js"></script>
+  
+## Bookmarklet
+
+You can also drag the following bookmarklet to your menu bar to avoid adding any markup at all to your HTML file.
+
+<a href="javascript:var cmp=document.createElement('script');cmp.type='text/javascript';cmp.src='https://github.com/alexdunae/cm-preview/raw/master/cm-preview.js';var s=document.getElementsByTagName('body')[0];s.parentNode.insertBefore(cmp,s);" style="border: 1px solid #CCC; background-color: #EEE; padding: 5px;">CM Preview</a>
 
 This is a rough-and-ready little script, lightly tested in Safari, Chrome and Firefox.  It's released under the MIT license.  Patches and improvements are most welcome.
 
