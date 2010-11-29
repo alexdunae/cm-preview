@@ -27,7 +27,6 @@ var imgs = document.getElementsByTagName('img');
 for(var i = 0; i < imgs.length; i++) {
 	var src = imgs[i].getAttribute('src', 2);
 	if (/\$imagesrc/i.test(src)) {
-		console.log('match src');
 		// unescape attributes for Firefox
 		if (src.indexOf('%') !== false) {
 			src = unescape(src);
