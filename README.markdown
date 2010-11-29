@@ -21,6 +21,18 @@ Link the script at the end of your HTML email file and view the file in your bro
 
   <script src="cm-preview.js"></script>
   
+You can also created a bookmarklet with the following address:
+
+  javascript:var cmp=document.createElement('script');cmp.type='text/javascript';cmp.src='https://github.com/alexdunae/cm-preview/raw/master/cm-preview.js';var s=document.getElementsByTagName('body')[0];s.parentNode.insertBefore(cmp,s);" style="border: 1px solid #CCC; background-color: #EEE; padding: 5px;
+
+## TODO
+
+* test, test, test
+* wrap elements in `a` tags if `link=true`
+* add support for `tableofcontents`
+* handle the rest of [Campaign Monitor's template tags](http://help.campaignmonitor.com/topic.aspx?t=129)
+
 This is a rough-and-ready little script, lightly tested in Safari, Chrome and Firefox.  It's released under the MIT license.  Patches and improvements are most welcome.
+
 
 Created by Alex Dunae at [Dialect](http://dialect.ca/).
