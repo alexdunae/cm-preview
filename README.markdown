@@ -6,7 +6,7 @@ It replaces all Campaign Monitor's template tags with their fallback defaults.  
 
 On the left of the screenshot you can see the usual markup madness.  On the right you see the results of the script.
 
-![Screenshot](screenshot.jpg)
+![Screenshot](/alexdunae/cm-preview/raw/master/screenshot.jpg)
 
 Specifically, this script:
 
