@@ -29,8 +29,6 @@ You can also create a bookmarklet with the following address:
 
 * test, test, test
 * wrap elements in `a` tags if `link=true`
-* add support for `tableofcontents`
-* handle the rest of [Campaign Monitor's template tags](http://help.campaignmonitor.com/topic.aspx?t=129)
 
 This is a rough-and-ready little script, lightly tested in Safari, Chrome and Firefox.  It's released under the MIT license.  Patches and improvements are most welcome.
 
