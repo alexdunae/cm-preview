@@ -19,6 +19,8 @@ repl = repl.replace(/\&lt;\$(title|description)[\s]+([\w]+="[\w]+"[\s]*)?default
 // and show personalization fallbacks
 repl = repl.replace(/\[(\w+),fallback=(.[^\]]+)\]/ig, "$2");
 
+repl = repl.replace(/\&lt;\$repeatertitle\$\&gt;/ig, '<a href="#">Table of contents</a>');
+
 // dates
 var dt = new Date(), 
     days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
@@ -50,8 +52,9 @@ for(var i = 0; i < imgs.length; i++) {
 }
 
 // show multiple repeaters
-var repeaters = document.getElementsByTagName('repeater');
-var clones = [];
+var repeaters = document.getElementsByTagName('repeater'), 
+    clones = [];
+
 for(var i = 0; i < repeaters.length; i++) {
 	clones[i] = repeaters[i].cloneNode(true);
 }
@@ -60,5 +63,14 @@ for(var i = 0; i < clones.length; i++) {
 	repeaters[i].insertBefore(clones[i], null);
 }
 
+// show multiple tableofcontents entries
+var tocs = document.getElementsByTagName('tableofcontents'), 
+    clones = [];
 
+for(var i = 0; i < tocs.length; i++) {
+	clones[i] = tocs[i].cloneNode(true);
+}
 
+for(var i = 0; i < clones.length; i++) {
+	tocs[i].insertBefore(clones[i], null);
+}
