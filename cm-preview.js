@@ -10,16 +10,15 @@
 
 var body = document.getElementsByTagName('body');
 
-// show default text
-// single quoted
+// show default text, single and double quoted
 repl = body[0].innerHTML.replace(/\&lt;\$(title|description)[\s]+([\w]+='[\w]+'[\s]*)?default='(.[^']+)'[\s]*([\w]+='[\w]+'[\s]*)?\$\&gt;/ig, "$3");
-// double quoted
 repl = repl.replace(/\&lt;\$(title|description)[\s]+([\w]+="[\w]+"[\s]*)?default="(.[^"]+)"[\s]*([\w]+="[\w]+"[\s]*)?\$\&gt;/ig, "$3");
+
+repl = repl.replace(/\&lt;\$repeatertitle\$\&gt;/ig, '<a href="#">Table of contents</a>');
 
 // and show personalization fallbacks
 repl = repl.replace(/\[(\w+),fallback=(.[^\]]+)\]/ig, "$2");
-
-repl = repl.replace(/\&lt;\$repeatertitle\$\&gt;/ig, '<a href="#">Table of contents</a>');
+repl = repl.replace(/\[email\]/ig, '<a href="mailto:example@example.com">example@example.com</a>');
 
 // dates
 var dt = new Date(), 
