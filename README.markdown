@@ -23,7 +23,7 @@ Link the script at the end of your HTML email file and view the file in your bro
   
 You can also create a bookmarklet with the following address:
 
-    javascript:var cmp=document.createElement('script');cmp.type='text/javascript';cmp.src='https://github.com/alexdunae/cm-preview/raw/master/cm-preview.js';var s=document.getElementsByTagName('body')[0];s.parentNode.insertBefore(cmp,s);
+    javascript:(function() {var%20cmp=document.createElement('script');cmp.type='text/javascript';cmp.src='https://github.com/alexdunae/cm-preview/raw/master/cm-preview.js';document.getElementsByTagName('body')[0].appendChild(cmp);}());
 
 ## TODO
 
